@@ -1,77 +1,81 @@
 /* Basic Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a;
-    color: white;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+  font-family: "Arial", sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 .container {
-    display: flex;
-    min-height: 100vh;
+  display: flex;
+  min-height: 100vh;
 }
 
 /* Sidebar */
 .sidebar {
-    width: 250px;
-    background-color: #2a2a3b;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: 100;
+  width: 250px;
+  background-color: #2a2a3b;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 100;
 }
 
 .sidebar .logo {
-    font-size: 24px;
-    color: #ff5722;
-    font-weight: bold;
-    margin-bottom: 40px;
+  font-size: 24px;
+  color: #ff5722;
+  font-weight: bold;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Spacing between icon and text */
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .sidebar ul li {
-    margin: 25px 0;
+  margin: 25px 0;
 }
 
 .sidebar ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    transition: background-color 0.3s;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Spacing between icon and text */
+  padding: 10px;
+  transition: background-color 0.3s;
 }
 
 .sidebar ul li a.active,
 .sidebar ul li a:hover {
-    background-color: #ff5722;
-    border-radius: 5px;
+  background-color: #ff5722;
+  border-radius: 5px;
 }
 
 /* Main Content */
 .main-content {
-    margin-left: 270px;
-    padding: 20px;
-    flex-grow: 1;
+  margin-left: 270px;
+  padding: 20px;
+  flex-grow: 1;
 }
 
 /* Section Styling */
 .section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #home,
@@ -79,218 +83,203 @@ body {
 #skills,
 #portfolio,
 #contact {
-    height: 100vh;
-    padding: 20px;
+  height: 100vh;
+  padding: 20px;
 }
 
-
 #home .home-text {
-    max-width: calc(100% - 350px);
- 
-    position: relative;
+  max-width: calc(100% - 350px);
+  position: relative;
   margin-top: 15%;
   margin-bottom: auto;
-    margin-left:5%;
-
-    padding-right:50%;
-
-    z-index: 2;
-
-    text-align: left;
-
+  margin-left: 5%;
+  padding-right: 50%;
+  z-index: 2;
+  text-align: left;
 }
 
 #home .home-text h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
 #home .home-text p {
-    font-size: 20px;
-    margin-bottom: 30px;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
 #home .btn {
-    background: #ff5722;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background: #ff5722;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 #home .btn:hover {
-    background: #e64a19;
+  background: #e64a19;
 }
 
 /* Oval Image Styling */
 .PersonalPhoto {
-    border-radius: 50%;
-    border: 15px solid #ff5722;
-    width: 400px;
-    height: 450px;
-    object-fit: cover;
-    position: absolute;
-    top:-50%;
-    bottom: auto;
-    right:5%;
-    left: auto;
+  border-radius: 50%;
+  border: 15px solid #ff5722;
+  width: 400px;
+  height: 450px;
+  object-fit: cover;
+  position: absolute;
+  top: -50%;
+  bottom: auto;
+  right: 5%;
+  left: auto;
+}
+
+/* About Section */
+#about {
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 850px;
+  max-height: min-content;
+  text-align: initial;
+  background-color: #2a2a3b;
+  border: 5px solid #ff5722;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#about h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #ff5722;
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Skills Section */
 #skills .skills-list {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 columns */
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .skill {
-    background-color: #2a2a3b;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+  background-color: #2a2a3b;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .skill:hover {
-    transform: scale(1.05);
-    border-color: #FF9F00;
-    /* Yellowish-orange on hover */
+  transform: scale(1.05);
+  border-color: #ff9f00;
 }
 
 .skill-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    border: 4px solid #FFB300;
-    /* Yellowish-orange border */
-    background-color: white;
-    /* White background for the inner circle */
-    padding: 5px;
-    transition: border-color 0.3s ease;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 4px solid #ffb300;
+  background-color: white;
+  padding: 5px;
+  transition: border-color 0.3s ease;
 }
 
 .skill-icon:hover {
-    border-color: #FF9F00;
-    /* Change border color to yellowish-orange on hover */
+  border-color: #ff9f00;
 }
 
 .skill-name {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
 }
 
 /* Buttons */
 .btn {
-    background: #ff5722;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background: #e64a19;
+  background: #e64a19;
 }
 
 /* Contact Section Styling */
 #contact .contact-info {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 #contact .contact-item {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
 }
 
 #contact .contact-icon {
-    width: 100px;
-    /* Icon width */
-    height: 100px;
-    /* Icon height */
-    margin-right: 10px;
-    /* Space between the icon and text */
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
 }
 
 #contact .contact-info p {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 #contact .contact-info a {
-    color: #ff5722;
-    text-decoration: none;
-    font-weight: bold;
+  color: #ff5722;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 #contact .contact-info a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Portfolio Section Styling */
 #portfolio p {
-    font-size: 18px;
-    line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
+  .container {
+    flex-direction: column;
+  }
 
-    .sidebar {
-        width: 100%;
-        height: auto;
-    }
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
 
-    .main-content {
-        margin-left: 0;
-    }
+  .main-content {
+    margin-left: 0;
+  }
 
-    .sidebar ul li a {
-        font-size: 16px;
-    }
+  .sidebar ul li a {
+    font-size: 16px;
+  }
 
-    #skills .skills-list {
-        grid-template-columns: repeat(2, 1fr);
-        /* Adjust to 2 columns for smaller screens */
-    }
-
-    .skill {
-        text-align: center;
-    }
-
-    .skill-level {
-        margin-top: 5px;
-    }
-        /* Download Button */
-        .btn-download {
-            background: #4caf50;
-            /* Green background */
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-top: 10px;
-            /* Space between text and button */
-        }
-    
-        .btn-download:hover {
-            background: #388e3c;
-            /* Darker green on hover */
-        }
+  #skills .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
