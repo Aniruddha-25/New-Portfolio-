@@ -68,20 +68,31 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-document
-  .querySelector(".feedback-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+document.getElementById("feedback-form").addEventListener("submit", async function (event) {
+  event.preventDefault(); // Prevent default form submission
 
-    const formData = new FormData(event.target);
-    const passkey = formData.get("passkey");
+  const form = event.target;
+  const formData = new FormData(form);
 
-    if (passkey === "18fca1a1-7146-4ca5-ab50-e4bd67bed5d8") {
-      alert("Form submitted successfully!");
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+    });
+
+    if (response.ok) {
+      document.getElementById("success-message").style.display = "block";
+      document.getElementById("error-message").style.display = "none";
+      form.reset(); // Clear the form
     } else {
-      alert("Invalid passkey. Form submission failed.");
+      throw new Error("Failed to send feedback");
     }
-  });
+  } catch (error) {
+    document.getElementById("success-message").style.display = "none";
+    document.getElementById("error-message").style.display = "block";
+    console.error("Error:", error);
+  }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const photo = document.querySelector(".PersonalPhoto");
@@ -107,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const skills = document.querySelectorAll(".skill"); // Select all skill items
 
-  // Create an Intersection Observer
+  
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -119,11 +130,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.2, // Trigger when 20% of the element is visible
+      threshold: 0.2, 
     }
   );
 
-  // Observe each skill item
+
   skills.forEach((skill) => observer.observe(skill));
 });
 
