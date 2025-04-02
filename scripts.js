@@ -81,15 +81,33 @@ document.getElementById("feedback-form").addEventListener("submit", async functi
     });
 
     if (response.ok) {
-      document.getElementById("success-message").style.display = "block";
-      document.getElementById("error-message").style.display = "none";
+      const successMessage = document.getElementById("success-message");
+      const errorMessage = document.getElementById("error-message");
+
+      successMessage.style.display = "block";
+      errorMessage.style.display = "none";
+
       form.reset(); // Clear the form
+
+      // Hide the success message after 5 seconds
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 5000);
     } else {
       throw new Error("Failed to send feedback");
     }
   } catch (error) {
-    document.getElementById("success-message").style.display = "none";
-    document.getElementById("error-message").style.display = "block";
+    const successMessage = document.getElementById("success-message");
+    const errorMessage = document.getElementById("error-message");
+
+    successMessage.style.display = "none";
+    errorMessage.style.display = "block";
+
+    // Hide the error message after 5 seconds
+    setTimeout(() => {
+      errorMessage.style.display = "none";
+    }, 5000);
+
     console.error("Error:", error);
   }
 });

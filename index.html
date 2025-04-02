@@ -372,16 +372,19 @@
                 ></textarea>
               </div>
 
-              <input
-                type="hidden"
-                id="passkey"
-                name="passkey"
-                value="18fca1a1-7146-4ca5-ab50-e4bd67bed5d8"
-              />
               <button type="submit" class="btn" id="submit-button">
                 Submit Feedback
               </button>
             </form>
+
+            <div id="form-messages" style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; width: 80%; max-width: 600px;">
+              <p id="success-message" style="display: none; background-color: #d4edda; color: #155724; padding: 15px; border: 1px solid #c3e6cb; border-radius: 5px; text-align: center;">
+                Feedback sent successfully!
+              </p>
+              <p id="error-message" style="display: none; background-color: #f8d7da; color: #721c24; padding: 15px; border: 1px solid #f5c6cb; border-radius: 5px; text-align: center;">
+                Failed to send feedback. Please try again.
+              </p>
+            </div>
           </section>
         </div>
       </div>
