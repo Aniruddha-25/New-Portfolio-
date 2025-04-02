@@ -1,14 +1,10 @@
-// scripts.js
-
-// Get all the navigation links
 const navLinks = document.querySelectorAll(".sidebar ul li a");
+const sections = document.querySelectorAll("section");
 
-// Listen for scroll events to highlight the active section
 window.addEventListener("scroll", () => {
   let currentSection = "";
 
-  // Loop through each section to check which one is currently in view
-  document.querySelectorAll(".section").forEach((section) => {
+  sections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
 
@@ -17,7 +13,6 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  // Remove the 'active' class from all links
   navLinks.forEach((link) => {
     link.classList.remove("active");
     if (link.getAttribute("href").includes(currentSection)) {
@@ -26,10 +21,8 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Add click event to navigation links
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    // Scroll to the section
     const sectionId = link.getAttribute("href").slice(1); // Get the section id from href
     const section = document.getElementById(sectionId);
 
@@ -38,35 +31,32 @@ navLinks.forEach((link) => {
       behavior: "smooth",
     });
 
-    // Add the active class to the clicked link
     navLinks.forEach((link) => link.classList.remove("active"));
     link.classList.add("active");
   });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".sidebar ul li a");
 
-  // Get the current hash from the URL
   const currentHash = window.location.hash || "#home"; // Default to #home
 
   links.forEach((link) => {
-    // Remove active class from all links
     link.classList.remove("active");
 
-    // Add active class to the link matching the current hash
     if (link.getAttribute("href") === currentHash) {
       link.classList.add("active");
     }
   });
 
-  // Add click event listener to update active link
   links.forEach((link) => {
     link.addEventListener("click", () => {
-      links.forEach((l) => l.classList.remove("active")); // Remove from all
-      link.classList.add("active"); // Add to clicked link
+      links.forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
     });
   });
 });
+
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -77,3 +67,85 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+document
+  .querySelector(".feedback-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const passkey = formData.get("passkey");
+
+    if (passkey === "18fca1a1-7146-4ca5-ab50-e4bd67bed5d8") {
+      alert("Form submitted successfully!");
+    } else {
+      alert("Invalid passkey. Form submission failed.");
+    }
+  });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const photo = document.querySelector(".PersonalPhoto");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          photo.classList.add("visible"); 
+        } else {
+          photo.classList.remove("visible"); 
+        }
+      });
+    },
+    {
+      threshold: 0.5, 
+    }
+  );
+
+  observer.observe(photo);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const skills = document.querySelectorAll(".skill"); // Select all skill items
+
+  // Create an Intersection Observer
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // Add 'visible' class when in view
+        } else {
+          entry.target.classList.remove("visible"); // Remove 'visible' class when out of view
+        }
+      });
+    },
+    {
+      threshold: 0.2, // Trigger when 20% of the element is visible
+    }
+  );
+
+  // Observe each skill item
+  skills.forEach((skill) => observer.observe(skill));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollElements = document.querySelectorAll(".scroll-animation");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // Add 'visible' class when in view
+        } else {
+          entry.target.classList.remove("visible"); // Remove 'visible' class when out of view
+        }
+      });
+    },
+    {
+      threshold: 0.2, 
+    }
+  );
+
+
+  scrollElements.forEach((el) => observer.observe(el));
+});
+

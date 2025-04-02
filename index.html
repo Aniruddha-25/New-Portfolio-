@@ -5,218 +5,385 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    </body>
   </head>
   <body>
     <div class="container">
- 
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-/>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      />
 
-<!-- Sidebar Navigation -->
-<nav class="sidebar">
-  <div class="logo">
-
-<i class="fas fa-desktop"></i>
-
-
-Portfolio
-  </div>
-  <ul>
-    <li>
-      <a href="#home"><i class="fas fa-home"></i>Home</a>
-    </li>
-    <li>
-      <a href="#about"><i class="fas fa-user"></i>About</a>
-    </li>
-    <li>
-      <a href="#skills"><i class="fas fa-tools"></i>Skills</a>
-    </li>
-    <li>
-      <a href="#portfolio"><i class="fas fa-briefcase"></i>Portfolio</a>
-    </li>
-    <li>
-      <a href="#contact"><i class="fas fa-envelope"></i>Contact</a>
-    </li>
-  </ul>
-</nav>
-
-
-      <!-- Main Content -->
-      <div class="main-content">
-        <section id="home" class="section">
-          <div class="home-text">
-            <img src="Img Source\IMG.jpg" alt="Img" class="PersonalPhoto" />
-            <h1>Hi, My Name is Aniruddha</h1>
-            <p>
-              An AI and Machine Learning Engineer skilled in Python and Java. I
-              specialize in creating innovative ML models and in making
-              applications to solve real-world problems.
-            </p>
-            <a
-              href="Portfolio\Resume.pdf"
-              download="Aniruddha_CV.pdf"
-              class="btn btn-download"
-            >
-              Download My CV
-            </a>
-          </div>
-        </section>
-
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <div class="about-box">
-        <p>
-            Hello! I'm Aniruddha Salvankar, an AI and Machine Learning Engineer with a passion for building innovative
-            solutions.
-            I specialize in using advanced machine learning techniques to create intelligent applications that solve
-            real-world problems.
-        </p>
-        <p>
-        I am refining my skills in Python, Java, and other technologies to build scalable systems. My expertise includes
-        designing ML models, optimizing algorithms, and integrating AI into applications. I enjoy learning, experimenting, and
-        contributing to open-source projects, while staying updated on the latest AI advancements.
-        </p>
-    </div>
-</section>
-
-
-        <!-- Skills Section -->
-        <div id="skills" class="section">
-          <h2>Skills</h2>
-          <ul class="skills-list">
-            <li class="skill">
-              <div class="skill-item">
-                <img
-                  src="Img Source/python.webp"
-                  alt="Python Icon"
-                  class="skill-icon"
-                />
-                <div class="skill-name">Python</div>
-              </div>
+      <div class="container">
+        <nav class="sidebar" id="sidebar">
+          <div class="logo"><i class="fas fa-desktop"></i> Portfolio</div>
+          <ul id="sidebar-menu">
+            <li>
+              <a href="#home"><i class="fas fa-home"></i> Home</a>
             </li>
-            <li class="skill">
-              <div class="skill-item">
-                <img
-                  src="Img Source/Java.jpg"
-                  alt="Java Icon"
-                  class="skill-icon"
-                />
-                <div class="skill-name">Java</div>
-              </div>
+            <li>
+              <a href="#about"><i class="fas fa-user"></i> About</a>
             </li>
-            <li class="skill">
-              <div class="skill-item">
-                <img
-                  src="Img Source/MySql.png"
-                  alt="MySQL Icon"
-                  class="skill-icon"
-                />
-                <div class="skill-name">My SQL</div>
-              </div>
+            <li>
+              <a href="#experience"
+                ><i class="fas fa-briefcase"></i> Experience</a
+              >
             </li>
-            <li class="skill">
-              <div class="skill-item">
-                <img
-                  src="Img Source/SolidEdge.png"
-                  alt="SolidEdge Icon"
-                  class="skill-icon"
-                />
-                <div class="skill-name">SolidEdge</div>
-              </div>
+            <li>
+              <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
             </li>
-            <li class="skill">
-              <div class="skill-item">
-                <img
-                  src="Img Source/HTML.webp"
-                  alt="HTML Icon"
-                  class="skill-icon"
-                />
-                <div class="skill-name">HTML</div>
-              </div>
+            <li>
+              <a href="#portfolio"><i class="fas fa-file-alt"></i> Portfolio</a>
             </li>
-            <li class="skill">
-              <div class="skill-item">
-                <img
-                  src="Img Source/CSS.png"
-                  alt="CSS Icon"
-                  class="skill-icon"
-                />
-                <div class="skill-name">CSS</div>
-              </div>
+            <li>
+              <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
             </li>
-            <li class="skill">
-              <div class="skill-item">
-                <img
-                  src="Img Source/JavaScript.webp"
-                  alt="JavaScript Icon"
-                  class="skill-icon"
-                />
-                <div class="skill-name">JavaScript</div>
-              </div>
-            </li>
-            <li class="skill">
-              <div class="skill-item">
-                <img
-                  src="Img Source/Matlab.png"
-                  alt="Matlab Icon"
-                  class="skill-icon"
-                />
-                <div class="skill-name">Matlab</div>
-              </div>
+            <li>
+              <a href="#feedback"><i class="fas fa-comment"></i> Feedback</a>
             </li>
           </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+          <!-- Home Section -->
+          <section id="home">
+            <div class="home-content">
+              <div class="home-text">
+                <h1>Hi, My Name is Aniruddha</h1>
+                <p>
+                  An AI and Machine Learning Engineer skilled in Python and
+                  Java. I specialize in creating innovative ML models and in
+                  making applications to solve real-world problems.
+                </p>
+                <a
+                  href="./Portfolio/Resume.pdf"
+                  class="btn"
+                  download="Aniruddha_CV.pdf"
+                  >Download CV</a
+                >
+              </div>
+              <img
+                src="./Img Source/IMG.jpg"
+                alt="Personal Photo"
+                class="PersonalPhoto"
+              />
+            </div>
+          </section>
+
+          <section id="about" class="section">
+            <h2>About Me</h2>
+            <div class="about-box">
+              <p>
+                Hello! I'm Aniruddha Salvankar, an AI and Machine Learning
+                Engineer with a passion for building innovative solutions. I
+                specialize in using advanced machine learning techniques to
+                create intelligent applications that solve real-world problems.
+              </p>
+              <p>
+                I am refining my skills in Python, Java, and other technologies
+                to build scalable systems. My expertise includes designing ML
+                models, optimizing algorithms, and integrating AI into
+                applications. I enjoy learning, experimenting, and contributing
+                to open-source projects, while staying updated on the latest AI
+                advancements.
+              </p>
+            </div>
+          </section>
+
+          <!-- Experience Section -->
+          <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="experience-container">
+              <!-- Internship 1 -->
+              <h3 class="experience-title">
+                <span
+                  >Internship 1: Nicozn Technologies | Front-End Developer</span
+                >
+                <span class="duration">(Jan 2018 - Feb 2018)</span>
+              </h3>
+              <ul>
+                <li>Project: Restaurant Front-End Website</li>
+                <li>Technologies: HTML, CSS, JavaScript, Figma</li>
+                <li>
+                  <ul class="no-bullets">
+                    <li style="margin-top: 10px">
+                      Gained experience in Front-End Development using HTML,
+                      CSS, JavaScript, and Figma. Learnt about GSAP Animation
+                      and Google Firebase Hosting.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <!-- Internship 2 -->
+              <h3 class="experience-title">
+                <span
+                  >Internship 2: Suprajit Engineering Limited | Front-End
+                  Developer | PostgreSQL</span
+                >
+                <span class="duration" style="float: right"
+                  >(Mar 2025 - Jun 2025)</span
+                >
+              </h3>
+              <ul>
+                <li>Technologies: HTML, CSS, JavaScript, PostgreSQL</li>
+                <li>
+                  <ul class="no-bullets">
+                    <li style="margin-top: 10px">
+                      Gaining experience in Full-Stack Development using HTML,
+                      CSS, JavaScript, and PostgreSQL. Learning about Database
+                      Management and Integration, Enhancing Front-End
+                      Functionalities with Dynamic Content Rendering.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Skills Section -->
+          <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+              <li class="skill">
+                <div class="skill-item">
+                  <img
+                    src="Img Source/python.webp"
+                    alt="Python Icon"
+                    class="skill-icon"
+                  />
+                  <div class="skill-name">Python</div>
+                </div>
+              </li>
+              <li class="skill">
+                <div class="skill-item">
+                  <img
+                    src="Img Source/Java.jpg"
+                    alt="Java Icon"
+                    class="skill-icon"
+                  />
+                  <div class="skill-name">Java</div>
+                </div>
+              </li>
+              <li class="skill">
+                <div class="skill-item">
+                  <img
+                    src="Img Source/MySql.png"
+                    alt="MySQL Icon"
+                    class="skill-icon"
+                  />
+                  <div class="skill-name">MySQL</div>
+                </div>
+              </li>
+              <li class="skill">
+                <div class="skill-item">
+                  <img
+                    src="Img Source/SolidEdge.png"
+                    alt="SolidEdge Icon"
+                    class="skill-icon"
+                  />
+                  <div class="skill-name">SolidEdge</div>
+                </div>
+              </li>
+              <li class="skill">
+                <div class="skill-item">
+                  <img
+                    src="Img Source/HTML.webp"
+                    alt="HTML Icon"
+                    class="skill-icon"
+                  />
+                  <div class="skill-name">HTML</div>
+                </div>
+              </li>
+              <li class="skill">
+                <div class="skill-item">
+                  <img
+                    src="Img Source/CSS.png"
+                    alt="CSS Icon"
+                    class="skill-icon"
+                  />
+                  <div class="skill-name">CSS</div>
+                </div>
+              </li>
+              <li class="skill">
+                <div class="skill-item">
+                  <img
+                    src="Img Source/JavaScript.webp"
+                    alt="JavaScript Icon"
+                    class="skill-icon"
+                  />
+                  <div class="skill-name">JavaScript</div>
+                </div>
+              </li>
+              <li class="skill">
+                <div class="skill-item">
+                  <img
+                    src="Img Source/Matlab.png"
+                    alt="Matlab Icon"
+                    class="skill-icon"
+                  />
+                  <div class="skill-name">Matlab</div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <!--Portfolio Section-->
+          <section id="portfolio" class="section">
+            <h2>Portfolio</h2>
+            <div class="portfolio-container">
+              <!-- Project 1 -->
+              <div class="portfolio-box">
+                <a
+                  href="https://github.com/Aniruddha-25/House_Price_Prediction"
+                  target="_blank"
+                  class="portfolio-title"
+                >
+                  House Price Prediction
+                </a>
+                <p class="portfolio-description">
+                  This Model Uses all Python ML Models and tell which model will
+                  give you best Acccuracy by testing each Prediction and Present
+                  you the Prediction of best Model.
+                </p>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="portfolio-box">
+                <a
+                  href="https://github.com/Aniruddha-25/Royal_Enfield_Website"
+                  target="_blank"
+                  class="portfolio-title"
+                >
+                  Royal Enfield Website
+                </a>
+                <p class="portfolio-description">
+                  This is a Sample Website of Royal Enfield Website using HTML
+                  CSS and JS.
+                </p>
+              </div>
+
+              <!-- Project 3 -->
+              <div class="portfolio-box">
+                <a
+                  href="https://github.com/Abhi12003/Nicozen"
+                  target="_blank"
+                  class="portfolio-title"
+                >
+                  Rockside Resto Bar Website
+                </a>
+                <p class="portfolio-description">
+                  This Contains the Sample Website of the Rockside Resto Bar
+                  using HTML ,CSS and JS
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me through any of the following:</p>
+            <div class="contact-info">
+              <p class="contact-item">
+                <img
+                  src="Img Source\phone no icon.png"
+                  alt="Phone Icon"
+                  class="contact-icon"
+                />
+                <strong>Phone:</strong>  <a href="mailto:aniruddha.salvankar2523@gmail.com"
+                  >aniruddha.salvankar2523@gmail.com</a
+                >
+              </p>
+              <p class="contact-item">
+                <img
+                  src="Img Source\gmail icon.webp"
+                  alt="Email Icon"
+                  class="contact-icon"
+                />
+                <strong>Email:</strong>
+                <a href="mailto:aniruddha.salvankar2523@gmail.com"
+                  >aniruddha.salvankar2523@gmail.com</a
+                >
+              </p>
+              <p class="contact-item">
+                <img
+                  src="Img Source\linkedin icon.webp"
+                  alt="LinkedIn Icon"
+                  class="contact-icon"
+                />
+                <strong>LinkedIn:</strong>
+                <a
+                  href="https://www.linkedin.com/in/aniruddha-salvankar-193642264/"
+                  target="_blank"
+                >
+                  aniruddha-salvankar-193642264
+                </a>
+              </p>
+            </div>
+            <a href="mailto:aniruddha.salvankar2523@gmail.com" class="btn"
+              >Contact Me</a
+            >
+          </section>
+
+          <!-- Feedback Section -->
+          <section id="feedback" class="section">
+            <h2>Feedback</h2>
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="feedback-form"
+              id="feedback-form"
+            >
+              <!-- Hidden Access Key -->
+              <input
+                type="hidden"
+                name="access_key"
+                value="YOUR_ACCESS_KEY_HERE"
+              />
+
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your Feedback"
+                  required
+                ></textarea>
+              </div>
+
+              <input
+                type="hidden"
+                id="passkey"
+                name="passkey"
+                value="18fca1a1-7146-4ca5-ab50-e4bd67bed5d8"
+              />
+              <button type="submit" class="btn" id="submit-button">
+                Submit Feedback
+              </button>
+            </form>
+          </section>
         </div>
-
-        <section id="portfolio" class="section">
-          <h2>Portfolio</h2>
-          <p>Showcase your work here...</p>
-        </section>
-
-        <!-- Contact Section -->
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-          <h2>Contact</h2>
-          <p>Feel free to reach out to me through any of the following:</p>
-          <div class="contact-info">
-            <p class="contact-item">
-              <img
-                src="Img Source\phone no icon.png"
-                alt="Phone Icon"
-                class="contact-icon"
-              />
-              <strong>Phone:</strong> +91 8657809766
-            </p>
-            <p class="contact-item">
-              <img
-                src="Img Source\gmail icon.webp"
-                alt="Email Icon"
-                class="contact-icon"
-              />
-              <strong>Email:</strong>
-              <a href="mailto:aniruddha.salvankar2523@gmail.com"
-                >aniruddha.salvankar2523@gmail.com</a
-              >
-            </p>
-            <p class="contact-item">
-              <img
-                src="Img Source\linkedin icon.webp"
-                alt="LinkedIn Icon"
-                class="contact-icon"
-              />
-              <strong>LinkedIn:</strong>
-              <a
-                href="https://www.linkedin.com/in/aniruddha-salvankar-193642264/"
-                target="_blank"
-              >
-                aniruddha-salvankar-193642264
-              </a>
-            </p>
-          </div>
-          <a href="mailto:aniruddha.salvankar2523@gmail.com" class="btn">Contact Me</a>
-        </section>
       </div>
     </div>
     <script src="scripts.js"></script>
