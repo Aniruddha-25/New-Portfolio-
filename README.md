@@ -23,8 +23,8 @@ A **responsive and visually appealing portfolio website** built using **HTML**, 
 
 ## 🧰 Technologies Used
 
-- **HTML5** – For structuring the content  
-- **CSS3** – For styling and animations  
+- **HTML** – For structuring the content  
+- **CSS** – For styling and animations  
 - **JavaScript** – For interactivity and dynamic behavior  
 - **Font Awesome** – For icons used throughout the website  
 
